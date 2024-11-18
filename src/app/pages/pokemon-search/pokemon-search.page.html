@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Pokémon Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="pokemon">
+    <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name" />
+    <h2>{{ pokemon.name }}</h2>
+    <div class="datos">
+      <p>Altura: {{ pokemon.height }}</p>
+      <p>Peso: {{ pokemon.weight }}</p>
+      <p>Experiencia base: {{ pokemon.base_experience }}</p>
+      <p>Número de pokemon: {{ pokemon.id }}</p>
+      <h3>Habilidades</h3>
+      <ul>
+        <li *ngFor="let ability of pokemon.abilities">{{ ability.ability.name }}</li>
+      </ul>
+    </div>
+  </div>
+  <ion-item>
+    <ion-label position="floating">Name of the Pokemon</ion-label>
+    <ion-input [(ngModel)]="search"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="handleSearch()">Search</ion-button>
+
+</ion-content>
