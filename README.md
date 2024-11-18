@@ -1,20 +1,35 @@
 # Laboratorio 
 # Consumo de API's con ionic
 
-El presente repo contiene una aplicación que consume el API de https://pokeapi.co/, con el endpoint [https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0](https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0)
+## Proceso
 
-La actividad por realizar es generar una aplicación que me permita buscar y mostrar Pokémons pero con todas sus características, incluida su foto, para lo cual puede consumir el endpoint: https://pokeapi.co/api/v2/pokemon/ditto , en este caso "ditto" es el nombre del Pokémon a mostrar.
+### pokemon-search.page.ts
+Se modifica el pokemon-search.page.ts donde se busca el nombre del pokemon y se guarda su información
 
-Entregable: en el aula virtual deberá subir su repositorio de github donde debe detallar el proceso en el readme y adjuntar capturas de la app en ejecución. Pueden trabajar hasta 3 personas. Todos deben subir su repositorio.
+![image](https://github.com/user-attachments/assets/290e8e82-508b-45ef-ad08-bfd590a04f50)
+
+### pokemon-search.page.html
+Se agrega el diseño para mostrar la infromación
+
+![image](https://github.com/user-attachments/assets/8391481d-4221-4dfa-ae8e-07055ff54f80)
+
+### app-routing.module.ts
+Se agrega la ruta del componente para buscar el pokemon - linea 7
+
+![image](https://github.com/user-attachments/assets/77b574bc-cf98-48bc-99e6-c49a96395ea9)
+
+### pokemon-list.page.html
+Se agrego un boton para redirigir a la pagina de buscar pokemons
+
+![image](https://github.com/user-attachments/assets/360fbc75-dab0-4b79-94d9-24d135af806c)
 
 
-----
-ionic start pokeapp blank --type=angular
-cd pokeapp
+## Ejecución
+### Buscar al pokemon
+![image](https://github.com/user-attachments/assets/7acbc9e9-69c6-4c97-9094-e0180e8f98c6)
 
-npm install @angular/common @angular/http, puede que deba usar --force
 
-ionic generate service services/pokemon
+### Pokémon encontrado
+![image](https://github.com/user-attachments/assets/96dd27f1-951e-4fa3-a638-5f4fb3ebf7e1)
 
-ionic generate page pages/pokemon-list
 
